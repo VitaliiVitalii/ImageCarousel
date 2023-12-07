@@ -1,0 +1,25 @@
+@use '../variables.scss' as *;
+
+//function to convert px to rem
+@function rem($value) {
+    $remValue: calc($value / 16) + rem;
+    @return $remValue;
+
+}
+
+//media request
+@mixin media-max($breakpoint) {
+    @media screen and (max-width:$breakpoint) {
+        @content;
+
+    }
+
+}
+
+@mixin media-min($breakpoint) {
+    @media screen and (min-width:$breakpoint) {
+        @content;
+
+    }
+
+}

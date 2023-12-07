@@ -1,0 +1,18 @@
+/**************** Fonts ***************/
+$font_primary: 'Roboto', sans-serif;
+$fontSize: 16;
+/**************** Colors ***************/
+$crl-bg: #f7f7f7;
+$crl-bg-header: #d0dde7;
+/**************** Padding ****************/
+$containerPadding: 15;
+/**************** Width ***************/
+$minWidth: 320;
+$maxWidthContainer: 1440;
+$maxWidth: calc($maxWidthContainer + $containerPadding * 2);
+/*************** Breakpoints ***************/
+$mob: 320px;
+$mobL: 425px;
+$tab: 768px;
+$leptop: 1024px;
+$desk: 1440px;

@@ -1,0 +1,177 @@
+@use '../variables.scss' as *;
+@use '../mixins/mixins.scss' as *;
+@use '../animations.scss' as *;
+
+.carousel {
+    position: relative;
+    margin: 0 auto;
+    top: 7vh;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 50%;
+        left: 25%;
+        height: 3px;
+        background-color: #010101;
+
+    }
+
+    &::before {
+        top: rem(-25);
+
+    }
+
+    &__container {
+        display: flex;
+        max-height: rem(170);
+        margin-bottom: rem(20);
+
+        @include media-min($tab) {
+            max-height: rem(400);
+            
+        }
+
+        @include media-max($tab) {
+            height: rem(300);
+            
+        }
+
+        @include media-max($leptop) {
+            height: rem(350);
+
+        }
+
+        @include media-min($desk) {
+            height: rem(500);
+
+        }
+    
+    }
+    
+    &__wrapper {
+        display: flex; 
+        gap: rem(5);  
+        
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: rem(20);
+
+        &.selected {
+            opacity: 0.8;
+            box-sizing: border-box;
+            transition: opacity 0.3s ease-out;
+            transform: scale(0.95);
+
+        }
+    
+    }
+
+}
+
+@include media-max($mobL) {
+    .carousel__wrapper {
+        height: 200px;
+        margin: 0 auto;
+        overflow: hidden;
+
+    }
+
+}
+
+.btn {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    transform: translateY(100%);
+    border-radius: 50%;
+
+    @include media-min($tab) {
+        width: 6rem;
+        height: 6rem;
+        transform: translateY(110%);
+    }
+
+    @include media-min($desk) {
+        transform: translateY(160%);
+
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+
+    }
+
+    &-prev {
+        left: -10px;
+
+    }
+
+    &-next {
+        right: -10px;
+
+    }
+
+    &__arrow {
+        width: rem(36);
+
+    }
+
+}
+
+.selected-images {
+    padding: rem(10);
+    margin-top: rem(35);
+    border-radius: rem(20);
+    text-align: center;
+    transition: opacity 0.6s ease;
+
+    &__title {
+        font-size: rem(18);
+        margin-bottom: rem(10);
+        font-weight: 500;
+
+    }
+    
+    &__list {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    &__item {
+        max-height: 200px;
+        margin-bottom: 5px;
+        padding: rem(5) rem(10);
+        font-size: rem(14);
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: rem(10);
+        cursor: pointer;
+
+        @include media-min($mobL) {
+            font-size: rem(18);
+
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            background-color: rgba(0, 0, 0, 0.4);
+
+        }
+
+    }
+
+}

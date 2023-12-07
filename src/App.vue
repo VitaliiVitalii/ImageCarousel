@@ -5,12 +5,11 @@
 </template>
 
 <script setup>
-import AppHome from './components/AppHome.vue';
-
-
+  import AppHome from './components/AppHome.vue';
 
 </script>
 
-<style scoped>
+  <style lang="scss">
+    @import './assets/scss/style.scss';
 
 </style>

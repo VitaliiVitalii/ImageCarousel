@@ -1,0 +1,60 @@
+//list styles
+.list-fade-enter-active,
+.list-fade-leave-active{
+    transition: opacity 0.5s ease;
+    
+}
+
+.list-fade-enter,
+.list-fade-leave-to {
+    opacity: 0;
+}
+
+.list-fade-enter-from,
+.list-fade-leave-to {
+    opacity: 0;
+
+}
+
+.selected-images__item-enter-active,
+.selected-images__item-leave-active {
+    transition: opacity 0.5s;
+}
+
+.selected-images__item-enter,
+.selected-images__item-leave-to {
+    opacity: 0;
+}
+
+.block-fade-enter-active,
+.block-fade-leave-active {
+    transition: opacity 0.1s ease-in-out;
+
+}
+
+.block-fade-enter,
+.block-fade-leave-to {
+    opacity: 0;
+
+}
+
+.block-fade-enter-from,
+.block-fade-leave-to {
+    opacity: 0;
+
+}
+
+//carousel styles
+.carousel__wrapper {
+    position: relative;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}

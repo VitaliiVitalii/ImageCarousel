@@ -1,0 +1,41 @@
+@use './variables' as *;
+@use './mixins/mixins' as *;
+
+body {
+    background: $crl-bg;
+    font-family:$font_primary;
+
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: rem($containerPadding);
+    @include media-min(765px) {
+        padding: 20px 30px;
+    }
+
+}
+
+
+.header {
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    text-align: center;
+    background-color: $crl-bg-header;
+
+    &__title {
+        font-size: rem(22);
+        font-weight: 700;
+        line-height: 1.5;
+
+    }
+
+    &__logo {
+        width: 30px;
+
+    }
+
+}
+
+
+
